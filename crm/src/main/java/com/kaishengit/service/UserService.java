@@ -4,6 +4,8 @@ import com.kaishengit.mapper.RoleMapper;
 import com.kaishengit.mapper.UserMapper;
 import com.kaishengit.mapper.UserlogMapper;
 
+
+
 import javax.inject.Inject;
 import javax.inject.Named;
 
@@ -18,4 +20,6 @@ public class UserService {
     private UserlogMapper userlogMapper;
     @Inject
     private RoleMapper roleMapper;
+
+
 }

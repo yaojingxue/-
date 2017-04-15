@@ -14,6 +14,7 @@ public class User implements Serializable {
     private String weixin;
     private Timestamp createtime;
     private Integer roleid;
+    private Boolean enable;
 
     public Integer getId() {
         return id;
@@ -71,6 +72,14 @@ public class User implements Serializable {
         this.roleid = roleid;
     }
 
+    public Boolean getEnable() {
+        return enable;
+    }
+
+    public void setEnable(Boolean enable) {
+        this.enable = enable;
+    }
+
     @Override
     public String toString() {
         return "User{" +
@@ -81,6 +90,7 @@ public class User implements Serializable {
                 ", weixin='" + weixin + '\'' +
                 ", createtime=" + createtime +
                 ", roleid=" + roleid +
+                ", enable=" + enable +
                 '}';
     }
 }
