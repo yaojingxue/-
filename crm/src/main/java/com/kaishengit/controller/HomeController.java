@@ -1,5 +1,6 @@
 package com.kaishengit.controller;
 
+import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.LockedAccountException;
@@ -25,7 +26,8 @@ public class HomeController {
     public String login(String username, String password,RedirectAttributes redirectAttributes) {
         Subject subject = SecurityUtils.getSubject();
         try {
-            UsernamePasswordToken usernamePasswordToken = new UsernamePasswordToken(username, password);
+            //DigestUtils.md5Hex(password), 加密查询
+            UsernamePasswordToken usernamePasswordToken = new UsernamePasswordToken(username, DigestUtils.md5Hex(password));
             subject.login(usernamePasswordToken);
             return "redirect:/home";
         }catch( LockedAccountException e){
