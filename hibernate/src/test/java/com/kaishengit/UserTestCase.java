@@ -34,7 +34,7 @@ public class UserTestCase {
         Transaction transaction = session.beginTransaction();
 
         User user = new User();
-        user.setUsername("小姚");
+        user.setUsername("小王");
         user.setPassword("123123");
 
         session.save(user);

@@ -8,4 +8,6 @@ import com.kaishengit.pojo.User;
  */
 public interface UserMapper {
      User findByName(String username);
+
+     void updateUser(User user);
 }
